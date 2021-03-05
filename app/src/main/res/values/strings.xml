@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Glory Publishers</string>
+    <string name="app_name">Ozara Deal</string>
+    <string name="app_url_https">https://ozaradeal.com/</string>
+    <string name="app_url">ozaradeal.com</string>
 </resources>

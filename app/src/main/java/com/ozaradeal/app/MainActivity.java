@@ -1,4 +1,4 @@
-package com.glorypublishers.app;
+package com.ozaradeal.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,17 +23,21 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         webView = findViewById(R.id.webview);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new MyWebViewClient());
-        webView.loadUrl("https://glorypublishers.org/");
+        String appUrlHttps = getResources().getString(R.string.app_url_https);
+        webView.loadUrl(appUrlHttps);
     }
     private class MyWebViewClient extends WebViewClient {
 
         @SuppressWarnings( "deprecation" )
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if ("glorypublishers.org".equals(Uri.parse(url).getHost())) {
+            String appUrl = getResources().getString(R.string.app_url);
+            if ("ozaradeal.com".equals(Uri.parse(url).getHost())) {
                 // This is my website, so do not override; let my WebView load the page
                 return false;
             }
