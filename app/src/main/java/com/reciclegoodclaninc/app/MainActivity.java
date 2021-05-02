@@ -1,4 +1,4 @@
-package com.ozaradeal.app;
+package com.reciclegoodclaninc.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
