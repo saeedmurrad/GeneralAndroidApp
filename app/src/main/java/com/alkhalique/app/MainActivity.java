@@ -1,4 +1,4 @@
-package com.reciclegoodclaninc.app;
+package com.alkhalique.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
